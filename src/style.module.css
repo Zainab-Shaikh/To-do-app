@@ -1,0 +1,6 @@
+.checked {
+  text-decoration: line-through;
+}
+.unchecked {
+  text-decoration: none;
+}
