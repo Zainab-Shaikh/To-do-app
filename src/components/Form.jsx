@@ -8,11 +8,12 @@ function Form({ todo, remove, done }) {
   }
   return (
     <>
+      <h2>Click to check and uncheck the todo</h2>
       <ul key={todo}>
         {todo.map((element, index) => (
           <li key={element.id}>
             <p
-              onDoubleClick={() => check(element.id)}
+              onClick={() => check(element.id)}
               className={element.checked ? style.checked : ``}
             >
               {element.value}

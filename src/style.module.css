@@ -1,6 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: darkturquoise;
+}
+section {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+input,
+button {
+  padding: 0.3em;
+  font-size: 1.2em;
+  margin: 0.7em;
+}
+div,
+h2 {
+  margin-left: auto;
+  margin-right: auto;
+}
+button {
+  padding: 0.3em;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: darkslateblue;
+  border: none;
+  color: white;
+}
 .checked {
   text-decoration: line-through;
 }
 .unchecked {
   text-decoration: none;
+}
+ul {
+  margin-left: auto;
+  margin-right: auto;
+  list-style-type: none;
+}
+li {
+  background-color: lightgreen;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  padding-left: 2em;
+  padding-right: 2em;
+  margin: 1em;
+  justify-content: space-between;
+}
+p {
+  width: 300px;
+  word-wrap: break-word;
 }

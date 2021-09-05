@@ -2,7 +2,7 @@ import "./App.css";
 import Input from "./components/Input";
 import Form from "./components/Form";
 import { useState } from "react";
-
+import style from "./style.module.css";
 function App() {
   let initialValue = {
     id: uuidv4(),
@@ -45,10 +45,10 @@ function App() {
     console.log(todo);
   }
   return (
-    <>
-      <Input type="text" onChange={handleChange} value="+" add={add} />
+    <section>
+      <Input type="text" onChange={handleChange} value="Add" add={add} />
       <Form todo={todo} remove={handleRemove} done={done} />
-    </>
+    </section>
   );
 }
 
