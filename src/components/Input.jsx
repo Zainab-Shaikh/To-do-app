@@ -8,8 +8,8 @@ function Input(props) {
   }
   return (
     <div>
-      <input onChange={handleChange} />
-      <button onClick={add}>{props.value}</button>
+      <input onChange={handleChange} value={props.value} />
+      <button onClick={add}>{props.title}</button>
     </div>
   );
 }

@@ -2,7 +2,7 @@ import "./App.css";
 import Input from "./components/Input";
 import Form from "./components/Form";
 import { useState } from "react";
-import style from "./style.module.css";
+import "./style.module.css";
 function App() {
   let initialValue = {
     id: uuidv4(),
@@ -15,7 +15,7 @@ function App() {
   }
   let [todo, setTodo] = useState(JSON.parse(localStorage.getItem("key")) || []);
   function add() {
-    setData({ ...data, id: uuidv4() });
+    setData({ ...data, id: uuidv4(), value: "" });
     setTodo((todo = [...todo, data]));
     localStorage.setItem("key", JSON.stringify(todo));
     console.log(todo);
@@ -46,7 +46,13 @@ function App() {
   }
   return (
     <section>
-      <Input type="text" onChange={handleChange} value="Add" add={add} />
+      <Input
+        type="text"
+        onChange={handleChange}
+        title="Add"
+        add={add}
+        value={data.value}
+      />
       <Form todo={todo} remove={handleRemove} done={done} />
     </section>
   );
